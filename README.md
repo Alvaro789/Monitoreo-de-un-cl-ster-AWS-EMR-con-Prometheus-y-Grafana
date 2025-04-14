@@ -20,7 +20,24 @@ Accede a la consola de AWS y crea un clúster EMR con las siguientes caracterís
 - **Configuraciones**: Las mismas que las utilizadas en otras prácticas previas con AWS EMR
 - **Número de instancias**: 1 nodo maestro y 2 nodos core
 - **Clave SSH**: Utilizar la clave proporcionada por defecto en el laboratorio (`ls`)
- ### 1.2 Conectar la nodo maestro 
- - 
+- **Bucket**: Elegir uno previamente creado
+- **Tiempo de vida**: Configurar auto-terminación en 4 horas (opcional)
+
+### 1.2 Conectarse al nodo maestro
+
+Conéctate por SSH al nodo maestro utilizando la clave:
+ssh -i labsuser.pem hadoop@ec2-54-173-192-73.compute-1.amazonaws.com
+## 📌 Parte 2: Configuración de JMX Exporter
+### 2.1 Instalamos el JMX Exporter:
+wget https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0.16.1/jmx_prometheus_javaagent-0.16.1.jar
+### 2.2 Creamos el archivo de configurcion confgi.yml
+Comando: nano config.yml
+Y agregamos el siguiente contenido:
+ lowercaseOutputName: true
+ lowercaseOutputLabelNames: true
+ rules:
+  - pattern: ".*"
+
+
 
 
