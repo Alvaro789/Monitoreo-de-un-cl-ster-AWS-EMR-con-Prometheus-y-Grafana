@@ -106,9 +106,14 @@ http://localhost:9090.
 ### 4.1. Crear un dashboard en Grafana
 Crea un nuevo dashboard y agrega paneles para monitorear métricas 
 como:
+
 ▪ Uso de CPU y RAM.
+
 ▪ Espacio utilizado en HDFS.
+
 ▪ Estado del NameNode.
+
+### En el pdf esta documentada todos los pasos realizados y con fotos de cada comando utilizado para la practica
 
 
 
