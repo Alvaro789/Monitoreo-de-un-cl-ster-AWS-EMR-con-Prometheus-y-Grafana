@@ -61,13 +61,12 @@ sudo systemctl restart hadoop-hdfs-namenode
 
 Conéctate a la instancia EC2 y sigue los pasos para instalar Prometheus:
 
-1. Descarga el archivo tar.gz de Prometheus:
-
-bash
+```bash
 wget https://github.com/prometheus/prometheus/releases/download/v2.30.3/prometheus-2.30.3.linux-amd64.tar.gz
 tar -xzf prometheus-2.30.3.linux-amd64.tar.gz
 cd prometheus-2.30.3.linux-amd64
 ./prometheus --config.file=prometheus.yml
+
 
 ### 3.3 Configurar Prometheus
 
