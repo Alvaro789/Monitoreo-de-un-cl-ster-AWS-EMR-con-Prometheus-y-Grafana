@@ -48,9 +48,11 @@ o Edita el archivo de configuración del NameNode:
 
 sudo nano /etc/hadoop/conf/hadoop-env.sh
 
-o Agrega la siguiente línea:
+o Agrega la siguiente línea al final del archivo:
 
 export HADOOP_NAMENODE_OPTS="-javaagent:/home/hadoop/jmx_prometheus_javaagent0.16.1.jar=12345:/home/hadoop/config.yml $HADOOP_NAMENODE_OPTS"
-
+### 2.4 Reiniciamos el namenode
+Con el comando:
+sudo systemctl restart hadoop-hdfs-namenode
 
 
