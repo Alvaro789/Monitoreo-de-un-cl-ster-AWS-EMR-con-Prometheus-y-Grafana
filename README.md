@@ -100,7 +100,15 @@ sudo systemctl enable grafana-server
 ### 3.5 Configurar Grafana:
 En grafana en un nuevo dashboard tenemos que agregar prometheus como fuente de datos 
 
-*** http://localhost:9090.
+http://localhost:9090.
+
+## 📌Parte 4: Visualización de métricas en Grafana
+### 4.1. Crear un dashboard en Grafana
+Crea un nuevo dashboard y agrega paneles para monitorear métricas 
+como:
+▪ Uso de CPU y RAM.
+▪ Espacio utilizado en HDFS.
+▪ Estado del NameNode.
 
 
 
