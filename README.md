@@ -32,7 +32,9 @@ ssh -i labsuser.pem hadoop@ec2-54-173-192-73.compute-1.amazonaws.com
 wget https://repo1.maven.org/maven2/io/prometheus/jmx/jmx_prometheus_javaagent/0.16.1/jmx_prometheus_javaagent-0.16.1.jar
 ### 2.2 Creamos el archivo de configurcion confgi.yml
 Comando: nano config.yml
+
 Y agregamos el siguiente contenido:
+
  lowercaseOutputName: true
  lowercaseOutputLabelNames: true
  rules:
