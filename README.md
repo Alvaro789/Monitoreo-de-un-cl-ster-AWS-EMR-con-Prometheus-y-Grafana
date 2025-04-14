@@ -97,7 +97,10 @@ sudo systemctl start grafana-server
 
 sudo systemctl enable grafana-server
 
+### 3.5 Configurar Grafana:
+En grafana en un nuevo dashboard tenemos que agregar prometheus como fuente de datos 
 
+*** http://localhost:9090.
 
 
 
