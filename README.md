@@ -113,7 +113,7 @@ como:
 
 ▪ Estado del NameNode.
 
-### En el pdf esta documentada todos los pasos realizados y con fotos de cada comando utilizado para la practica
+### El pdf esta documentado todos los pasos realizados y con fotos de cada comando utilizado para la practica
 
 
 
