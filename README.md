@@ -42,7 +42,15 @@ Y agregamos el siguiente contenido:
  rules:
  
   - pattern: ".*"
+### 2.3 Configuramos el namenode para asi poder usar JMX Exporter
 
+o Edita el archivo de configuración del NameNode:
+
+sudo nano /etc/hadoop/conf/hadoop-env.sh
+
+o Agrega la siguiente línea:
+
+export HADOOP_NAMENODE_OPTS="-javaagent:/home/hadoop/jmx_prometheus_javaagent0.16.1.jar=12345:/home/hadoop/config.yml $HADOOP_NAMENODE_OPTS"
 
 
 
