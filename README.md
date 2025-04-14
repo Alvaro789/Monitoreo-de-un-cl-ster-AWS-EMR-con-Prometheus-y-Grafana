@@ -61,22 +61,44 @@ sudo systemctl restart hadoop-hdfs-namenode
 
 Conéctate a la instancia EC2 y sigue los pasos para instalar Prometheus:
 
-```bash
 wget https://github.com/prometheus/prometheus/releases/download/v2.30.3/prometheus-2.30.3.linux-amd64.tar.gz
+
 tar -xzf prometheus-2.30.3.linux-amd64.tar.gz
+
 cd prometheus-2.30.3.linux-amd64
+
 ./prometheus --config.file=prometheus.yml
+
+
 
 
 ### 3.3 Configurar Prometheus
 
 Edita el archivo `prometheus.yml` para agregar el clúster EMR como objetivo. Añade la siguiente configuración bajo la sección `scrape_configs`:
 
-```yaml
 scrape_configs:
+
   - job_name: 'emr-namenode'
+    
     static_configs:
-      - targets: ['<ip-nodo-maestro>:12345']
+    
+      - targets: ['3.80.99.53:7070']
+### 3.4 Instalar Grafana
+
+sudo apt-get install -y software-properties-common wget
+
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+
+sudo apt-get update
+
+sudo apt-get install grafana
+
+sudo systemctl start grafana-server
+
+sudo systemctl enable grafana-server
+
+
+
 
 
 
