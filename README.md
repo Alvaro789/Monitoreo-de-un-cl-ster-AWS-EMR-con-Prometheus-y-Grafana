@@ -58,10 +58,24 @@ sudo systemctl restart hadoop-hdfs-namenode
 ## 📌 Parte 3: Despliegue de Prometheus y Grafana
 ### 3.1 Creamos una instancia EC2 para prometheus y grafana
 ### 3.2 Instalamos el prometheus
-Con este comando descargamos el prometheus: *wget https://github.com/prometheus/prometheus/releases/download/v2.30.3/prometheus-2.30.3.linux-amd64.tar.gz
+Con este comando descargamos el prometheus: wget https://github.com/prometheus/prometheus/releases/download/v2.30.3/prometheus-2.30.3.linux-amd64.tar.gz
+
 tar -xzf prometheus-2.30.3.linux-amd64.tar.gz
+
 cd prometheus-2.30.3.linux-amd64
+
 ./prometheus --config.file=prometheus.yml
+### 3.3 Configurar Prometheus
+
+Edita el archivo `prometheus.yml` para agregar el clúster EMR como objetivo. Añade la siguiente configuración bajo la sección `scrape_configs`:
+
+```yaml
+scrape_configs:
+  - job_name: 'emr-namenode'
+    static_configs:
+      - targets: ['<ip-nodo-maestro>:12345']
+
+
 
 
 
