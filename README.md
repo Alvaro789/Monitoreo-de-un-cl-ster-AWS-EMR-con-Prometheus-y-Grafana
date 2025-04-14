@@ -55,4 +55,13 @@ export HADOOP_NAMENODE_OPTS="-javaagent:/home/hadoop/jmx_prometheus_javaagent0.
 Con el comando:
 sudo systemctl restart hadoop-hdfs-namenode
 
+## 📌 Parte 3: Despliegue de Prometheus y Grafana
+### 3.1 Creamos una instancia EC2 para prometheus y grafana
+### 3.2 Instalamos el prometheus
+Con este comando descargamos el prometheus: *wget https://github.com/prometheus/prometheus/releases/download/v2.30.3/prometheus-2.30.3.linux-amd64.tar.gz
+tar -xzf prometheus-2.30.3.linux-amd64.tar.gz
+cd prometheus-2.30.3.linux-amd64
+./prometheus --config.file=prometheus.yml
+
+
 
