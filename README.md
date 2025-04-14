@@ -36,8 +36,11 @@ Comando: nano config.yml
 Y agregamos el siguiente contenido:
 
  lowercaseOutputName: true
+ 
  lowercaseOutputLabelNames: true
+ 
  rules:
+ 
   - pattern: ".*"
 
 
